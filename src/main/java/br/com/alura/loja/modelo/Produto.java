@@ -16,7 +16,7 @@ public class Produto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String name;
+	private String nome;
 	private String descricao;
 	private BigDecimal preco;
 
@@ -24,10 +24,10 @@ public class Produto {
 		super();
 	}
 
-	public Produto(Long id, String name, String descricao, BigDecimal preco) {
+	public Produto(Long id, String nome, String descricao, BigDecimal preco) {
 		super();
 		this.id = id;
-		this.name = name;
+		this.nome = nome;
 		this.descricao = descricao;
 		this.preco = preco;
 	}
@@ -40,12 +40,12 @@ public class Produto {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public String getDescricao() {
@@ -83,7 +83,7 @@ public class Produto {
 
 	@Override
 	public String toString() {
-		return "Produto [id=" + id + ", name=" + name + ", descricao=" + descricao + ", preco=" + preco + "]";
+		return "Produto [id=" + id + ", nome=" + nome + ", descricao=" + descricao + ", preco=" + preco + "]";
 	}
 
 }
