@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import br.com.alura.loja.dao.ProdutoDAO;
 import br.com.alura.loja.modelo.Produto;
 
 public class CadastroDeProduto {
@@ -21,8 +22,10 @@ public class CadastroDeProduto {
 		
 		EntityManager em = factory.createEntityManager();
 		
+		ProdutoDAO dao = new ProdutoDAO(em);
+		
 		em.getTransaction().begin();
-		em.persist(celular);
+		dao.cadastrar(celular);
 		em.getTransaction().commit();
 		
 		
